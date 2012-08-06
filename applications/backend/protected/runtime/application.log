@@ -1,0 +1,151 @@
+2012/07/31 19:03:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii.tbl_admin' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_admin`.
+2012/07/31 19:03:47 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{admin}}" for active record class "Admin" cannot be found in the database.' in /var/www/backvendor-demo/framework/db/ar/CActiveRecord.php:2264
+Stack trace:
+#0 /var/www/backvendor-demo/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Admin))
+#1 /var/www/backvendor-demo/framework/db/ar/CActiveRecord.php(394): CActiveRecord::model('Admin')
+#2 /var/www/backvendor-demo/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(632): CActiveRecord->__construct()
+#4 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(199): CBackendController->setDefaultEntitiesParams()
+#5 /var/www/backvendor-demo/applications/backend/protected/controllers/SiteController.php(10): CBackendController->init()
+#6 /var/www/backvendor-demo/framework/web/CWebApplication.php(275): SiteController->init()
+#7 /var/www/backvendor-demo/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#8 /var/www/backvendor-demo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/backvendor-demo/applications/backend/index.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=/backvendor-demo/applications/backend/index.php?r=site/login
+---
+2012/08/01 12:10:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii.tbl_admin' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_admin`.
+2012/08/01 12:10:07 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{admin}}" for active record class "Admin" cannot be found in the database.' in /var/www/backvendor-demo/framework/db/ar/CActiveRecord.php:2264
+Stack trace:
+#0 /var/www/backvendor-demo/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Admin))
+#1 /var/www/backvendor-demo/framework/db/ar/CActiveRecord.php(394): CActiveRecord::model('Admin')
+#2 /var/www/backvendor-demo/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(632): CActiveRecord->__construct()
+#4 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(199): CBackendController->setDefaultEntitiesParams()
+#5 /var/www/backvendor-demo/applications/backend/protected/controllers/SiteController.php(10): CBackendController->init()
+#6 /var/www/backvendor-demo/framework/web/CWebApplication.php(275): SiteController->init()
+#7 /var/www/backvendor-demo/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#8 /var/www/backvendor-demo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/backvendor-demo/applications/backend/index.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=/backvendor-demo/applications/backend/index.php?r=site/login
+---
+2012/08/01 12:11:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii.tbl_migration' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_migration`.
+2012/08/01 13:44:39 [error] [exception.CException] exception 'CException' with message 'Property "User.ololo" is not defined.' in /var/www/backvendor-demo/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/backvendor-demo/framework/db/ar/CActiveRecord.php(144): CComponent->__get('ololo')
+#1 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(762): CActiveRecord->__get('ololo')
+#2 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(593): CBackendController->setDropDown()
+#3 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(941): CBackendController->changeModel('post', 'search')
+#4 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(243): CBackendController->getSubordinateDataProviders()
+#5 [internal function]: CBackendController->actionView('1')
+#6 /var/www/backvendor-demo/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#7 /var/www/backvendor-demo/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#8 /var/www/backvendor-demo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /var/www/backvendor-demo/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 /var/www/backvendor-demo/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /var/www/backvendor-demo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 /var/www/backvendor-demo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/backvendor-demo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/backvendor-demo/framework/web/CController.php(292): CFilterChain->run()
+#15 /var/www/backvendor-demo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/backvendor-demo/framework/web/CWebApplication.php(276): CController->run('view')
+#17 /var/www/backvendor-demo/framework/web/CWebApplication.php(135): CWebApplication->runController('site/view')
+#18 /var/www/backvendor-demo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /var/www/backvendor-demo/applications/backend/index.php(8): CApplication->run()
+#20 {main}
+REQUEST_URI=/backvendor-demo/applications/backend/index.php?r=site/view&id=1&entity=user
+HTTP_REFERER=http://localhost/backvendor-demo/applications/backend/index.php?r=site/admin&entity=user
+---
+2012/08/01 15:24:00 [error] [exception.Exception] exception 'Exception' with message 'Unknown entity ""!' in /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php:603
+Stack trace:
+#0 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(941): CBackendController->changeModel(NULL, 'search')
+#1 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(243): CBackendController->getSubordinateDataProviders()
+#2 [internal function]: CBackendController->actionView('1')
+#3 /var/www/backvendor-demo/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 /var/www/backvendor-demo/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 /var/www/backvendor-demo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /var/www/backvendor-demo/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /var/www/backvendor-demo/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /var/www/backvendor-demo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /var/www/backvendor-demo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/backvendor-demo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/backvendor-demo/framework/web/CController.php(292): CFilterChain->run()
+#12 /var/www/backvendor-demo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/backvendor-demo/framework/web/CWebApplication.php(276): CController->run('view')
+#14 /var/www/backvendor-demo/framework/web/CWebApplication.php(135): CWebApplication->runController('site/view')
+#15 /var/www/backvendor-demo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/backvendor-demo/applications/backend/index.php(8): CApplication->run()
+#17 {main}
+REQUEST_URI=/backvendor-demo/applications/backend/index.php?r=site/view&id=1&entity=post
+HTTP_REFERER=http://localhost/backvendor-demo/applications/backend/index.php?r=site/admin&entity=post
+---
+2012/08/01 15:24:29 [error] [exception.Exception] exception 'Exception' with message 'Unknown entity ""!' in /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php:603
+Stack trace:
+#0 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(941): CBackendController->changeModel(NULL, 'search')
+#1 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(243): CBackendController->getSubordinateDataProviders()
+#2 [internal function]: CBackendController->actionView('1')
+#3 /var/www/backvendor-demo/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 /var/www/backvendor-demo/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 /var/www/backvendor-demo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /var/www/backvendor-demo/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /var/www/backvendor-demo/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /var/www/backvendor-demo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /var/www/backvendor-demo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/backvendor-demo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/backvendor-demo/framework/web/CController.php(292): CFilterChain->run()
+#12 /var/www/backvendor-demo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/backvendor-demo/framework/web/CWebApplication.php(276): CController->run('view')
+#14 /var/www/backvendor-demo/framework/web/CWebApplication.php(135): CWebApplication->runController('site/view')
+#15 /var/www/backvendor-demo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/backvendor-demo/applications/backend/index.php(8): CApplication->run()
+#17 {main}
+REQUEST_URI=/backvendor-demo/applications/backend/index.php?r=site/view&id=1&entity=post
+HTTP_REFERER=http://localhost/backvendor-demo/applications/backend/index.php?r=site/admin&entity=post
+---
+2012/08/01 15:24:30 [error] [exception.Exception] exception 'Exception' with message 'Unknown entity ""!' in /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php:603
+Stack trace:
+#0 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(941): CBackendController->changeModel(NULL, 'search')
+#1 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(243): CBackendController->getSubordinateDataProviders()
+#2 [internal function]: CBackendController->actionView('1')
+#3 /var/www/backvendor-demo/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 /var/www/backvendor-demo/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 /var/www/backvendor-demo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /var/www/backvendor-demo/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /var/www/backvendor-demo/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /var/www/backvendor-demo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /var/www/backvendor-demo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/backvendor-demo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/backvendor-demo/framework/web/CController.php(292): CFilterChain->run()
+#12 /var/www/backvendor-demo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/backvendor-demo/framework/web/CWebApplication.php(276): CController->run('view')
+#14 /var/www/backvendor-demo/framework/web/CWebApplication.php(135): CWebApplication->runController('site/view')
+#15 /var/www/backvendor-demo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/backvendor-demo/applications/backend/index.php(8): CApplication->run()
+#17 {main}
+REQUEST_URI=/backvendor-demo/applications/backend/index.php?r=site/view&id=1&entity=post
+HTTP_REFERER=http://localhost/backvendor-demo/applications/backend/index.php?r=site/admin&entity=post
+---
+2012/08/01 15:24:32 [error] [exception.Exception] exception 'Exception' with message 'Unknown entity ""!' in /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php:603
+Stack trace:
+#0 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(941): CBackendController->changeModel(NULL, 'search')
+#1 /var/www/backvendor-demo/core/extensions/yii-backvendor/web/backend/CBackendController.php(243): CBackendController->getSubordinateDataProviders()
+#2 [internal function]: CBackendController->actionView('1')
+#3 /var/www/backvendor-demo/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 /var/www/backvendor-demo/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 /var/www/backvendor-demo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /var/www/backvendor-demo/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /var/www/backvendor-demo/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /var/www/backvendor-demo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /var/www/backvendor-demo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/backvendor-demo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/backvendor-demo/framework/web/CController.php(292): CFilterChain->run()
+#12 /var/www/backvendor-demo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/backvendor-demo/framework/web/CWebApplication.php(276): CController->run('view')
+#14 /var/www/backvendor-demo/framework/web/CWebApplication.php(135): CWebApplication->runController('site/view')
+#15 /var/www/backvendor-demo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/backvendor-demo/applications/backend/index.php(8): CApplication->run()
+#17 {main}
+REQUEST_URI=/backvendor-demo/applications/backend/index.php?r=site/view&id=1&entity=post
+HTTP_REFERER=http://localhost/backvendor-demo/applications/backend/index.php?r=site/admin&entity=post
+---
