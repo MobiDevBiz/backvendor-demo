@@ -8,6 +8,7 @@ return CMap::mergeArray(
             'import' => array(
                 'application.components.*',
                 'application.models.*',
+		'application.controllers.*',
                 'core.extensions.yii-backvendor.web.webservice.*',
             ),
             
